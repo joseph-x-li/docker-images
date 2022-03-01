@@ -38,7 +38,7 @@ def run(imagename, filename):
       upper_triangle = np.sum(ut_sample, axis=(0, 1)) / ((SL ** 2) / 2)
       lt = lower_triangle.clip(0, 255).astype(np.uint8)
       ut = upper_triangle.clip(0, 255).astype(np.uint8)
-      L, R, T, B = i * SKL, (i+4) * SKL, j * SKL, (j+4) * SKL
+      L, R, T, B = i * SKL, (i+6) * SKL, j * SKL, (j+6) * SKL
       svg_triangles.append(f"""<polygon fill="#{lt[0]:02x}{lt[1]:02x}{lt[2]:02x}" fill-opacity="1" stroke-opacity="1" stroke="#{lt[0]:02x}{lt[1]:02x}{lt[2]:02x}" stroke-width="1"
 points="{L},{B} {L},{T} {R},{B}"/>""")
       svg_triangles.append(f"""<polygon fill="#{ut[0]:02x}{ut[1]:02x}{ut[2]:02x}" fill-opacity="1" stroke-opacity="1" stroke="#{ut[0]:02x}{ut[1]:02x}{ut[2]:02x}" stroke-width="1"

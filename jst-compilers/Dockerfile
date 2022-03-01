@@ -13,9 +13,12 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get install -y make gcc g++ cmake ninja-build
 
 # utilities
-RUN apt-get install -y vim git python3.8 autoconf
+RUN apt-get install -y vim git python3.8 autoconf sudo
+
+# gcc
+RUN apt-get install -y make gcc g++ cmake ninja-build
 
 # ocaml
-RUN apt-get install -y opam 
+RUN apt-get install -y opam
 
 RUN apt-get clean

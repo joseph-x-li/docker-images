@@ -1,0 +1,154 @@
+ 1  cd /
+    2  cd cdev
+    3  ls
+    4  cd flambda-backend/
+    5  ls
+    6  cd ocaml
+    7  ls
+    8  vim Makefile
+    9  ls
+   10  cd ..
+   11  ls
+   12  cd cdev
+   13  ls
+   14  mkdir llvm-install
+   15  ls
+   16  cd llvm-project/
+   17  cd ..
+   18  ls
+   19  vim Makefile
+   20  mkdir tmp
+   21  code -r Makefile 
+   22  make
+   23  apt-get install python3.8
+   24  make
+   25  ls
+   26  cd llvm-install/
+   27  ls
+   28  cd ..
+   29  llvm
+   30  mkdir HODL
+   31  mv Makefile HODL
+   32  mv llvm-install/ HODL
+   33  mv llvm-project/ HODL
+   34  ls
+   35  mv ocaml-jst/ HODL
+   36  ls
+   37  mv HODL ~
+   38  ls
+   39  cd HODL/
+   40  ls
+   41  cd ..
+   42  rm CMakeCache.txt CPack*
+   43  ls
+   44  rm -rf bin benchmarks CMakeFiles/ cmake docks examples include lib lldb-test-build.noindex
+   45  ls
+   46  rm -rf build.ninja cmake_install.cmake compile_commands.json docs llvm.spec projects/ rules.ninja runtimes/ test/ tools unittests/ utils/
+   47  l
+   48  mv HODL/* .
+   49  ls
+   50  rmdir HODL
+   51  ls
+   52  cd llvm-install/
+   53  l
+   54  mv ../Makefile  .
+   55  ls
+   56  make
+   57  cd ..
+   58  ls
+   59  cd llvm-install/
+   60  l
+   61  cd bin
+   62  llvm
+   63  ls
+   64  cd ..
+   65  cd -
+   66  make path
+   67  export PATH=/cdev/llvm_install:$PATH
+   68  echo $PATH
+   69  cd ../.
+   70  llvm
+   71  opam sw create cdev --empty
+   72  opam init
+   73  opam init --yes --disable-sandboxing
+   74  clear
+   75  opam sw create cdev --empty
+   76  git clone https://github.com/ocaml-flambda/flambda-backend
+   77  cd flambda-backend/
+   78  l;
+   79  l
+   80  cd ocaml/
+   81  l
+   82  opam pin add ocaml-variants.4.12.0+dev
+   83  ls
+   84  opam pin add ocaml-variants.4.12.0+dev
+   85  find / -type d -name "ocaml-variants.4.12.0+dev"
+   86  git branch -ls
+   87  git branch -l
+   88  git checkout 12.0
+   89  git branch -a
+   90  git checkout release-4.12
+   91  ls
+   92  opam pin add ocaml-variants.4.12.0+dev
+   93  cd ..
+   94  ls
+   95  find / -type d -name "ocaml-variants.4.12.0*"
+   96  git status
+   97  git pull
+   98  ls
+   99  find . -name "Makefile"
+  100  cd ocaml
+  101  make
+  102  ./configure
+  103  make
+  104  make -j4
+  105  make install
+  106  ls
+  107  opam pin add ocaml-variants.4.12.0+dev
+  108  cd /
+  109  history | grep find
+  110  find / -type d -name "ocaml-variants.4.12.0*"
+  111  cd -
+  112  ls
+  113  find . -name "*variants*"
+  114  llvm
+  115  clang
+  116  llvm
+  117  ls
+  118  cd HODL/
+  119  ls
+  120  cd ..
+  121  cd HODL/ocaml-jst/
+  122  l
+  123  opam pin add ocaml-variants.4.12.0+dev
+  124  cd ../
+  125  cd 
+  126  ls
+  127  cd rm -rf HODL/
+  128  rm -rf HODL
+  129  cd
+  130  cd /cdev
+  131  ls
+  132  rm -rf ocaml-jst/
+  133  git clone https://github.com/ocaml-compiler-research/ocaml-jst.git
+  134  cd ocaml-jst/
+  135  git clean -dfx && ./tools/autogen && ./configure --prefix=`pwd`/../_install/jst --disable-ocamldoc --enable-warn-error --enable-ocamltest && make -j16 world.opt && make install
+  136  ls
+  137  cd tools/
+  138  l
+  139  git clean -dfx && ./tools/autogen && ./configure --prefix=`pwd`/../_install/jst --disable-ocamldoc --enable-warn-error --enable-ocamltest && make -j16 world.opt && make install
+  140  apt-get install -y autoconf
+  141  cd ..
+  142  git clean -dfx && ./tools/autogen && ./configure --prefix=`pwd`/../_install/jst --disable-ocamldoc --enable-warn-error --enable-ocamltest && make -j16 world.opt && make install
+  143  ks
+  144  ls
+  145  cd ocaml
+  146  ls
+  147  opam sw create 4.12.0
+  148  cd ..
+  149  opam sw create ocaml-system.4.12.0
+  150  cd 0
+  151  cd -
+  152  make test
+  153  make tests
+  154  history
