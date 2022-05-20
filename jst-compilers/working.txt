@@ -1,0 +1,12 @@
+
+// x86 gcc 
+CC=/usr/local/bin/gcc CXX=/usr/local/bin/g++-11
+// x86 clang
+CC=/usr/local/opt/llvm/bin/clang CXX=/usr/local/opt/llvm/bin/clang++
+// arm gcc
+CC=/opt/homebrew/Cellar/gcc/11.2.0_3/bin/gcc-11 CXX=/opt/homebrew/Cellar/gcc/11.2.0_3/bin/g++-11
+// arm clang
+CC=/opt/homebrew/opt/llvm/bin/clang CXX=/opt/homebrew/opt/llvm/bin/clang++
+
+
+CC=/opt/homebrew/opt/llvm/bin/clang CXX=/opt/homebrew/opt/llvm/bin/clang++ cmake -G Ninja ../llvm-project/llvm/ -DLLVM_TARGETS_TO_BUILD="X86" -DCMAKE_BUILD_TYPE=RelWithDebInfo -DLLVM_ENABLE_ASSERTIONS=On -DLLVM_ENABLE_PROJECTS="clang;clang-tools-extra;libcxx;libcxxabi;libunwind;lldb;compiler-rt;lld" -DCMAKE_INSTALL_PREFIX="/Users/josephli/Github/compilers-dev/llvm-install"
