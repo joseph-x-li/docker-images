@@ -40,4 +40,8 @@ RUN opam install -y shexp bigstring
 # core.v0.14.1 avoids some deprecations that appear in v0.15.0
 RUN opam install -y core.v0.14.1
 
+# oops forgot clang
+RUN sudo apt-get update
+RUN sudo apt-get install -y clang-13
+
 RUN apt-get clean
